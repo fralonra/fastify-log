@@ -1,0 +1,29 @@
+{
+  "name": "fastify-logger",
+  "version": "0.1.0",
+  "description": "Colorful terminal logger for Fastify.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fralonra/fastify-logger.git"
+  },
+  "keywords": [
+    "fastify",
+    "log",
+    "color"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fralonra/fastify-logger/issues"
+  },
+  "homepage": "https://github.com/fralonra/fastify-logger#readme",
+  "dependencies": {
+    "ansi-styles": "^3.2.1",
+    "fastify-plugin": "^0.2.2",
+    "moment": "^2.21.0"
+  }
+}
