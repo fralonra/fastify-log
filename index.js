@@ -15,21 +15,25 @@ function plugin (fastify, opts, next) {
 
   const options = Object.assign(defaultOptions, opts);
 
-  function info (text) {
-    log('info', text);
+  function info () {
+    log('info', arguments);
   }
 
-  function warn (text) {
-    log('warn', text);
+  function warn () {
+    log('warn', arguments);
   }
 
-  function error (text) {
-    log('error', text);
+  function error () {
+    log('error', arguments);
   }
 
   function log (type, text) {
-    const time = options.time ? momment().format(options.timeFormat) + ' ' : '';
-    console.log(`${style.color.ansi16m.hex(options[type])}${time}${text} ${style.color.close}`);
+    const time = options.time ? momment().format(options.timeFormat) + ' ': '';
+    console.log(style.color.ansi16m.hex(options[type]) + time + concat(text), style.color.close);
+  }
+
+  function concat(args) {
+    return Array.from(args).join(' ');
   }
 
   const logger = {
