@@ -6,6 +6,7 @@ const defaultOptions = {
   allInOne: false,
   time: true,
   timeFormat: 'HH:mm:ss',
+  level: 1,
   info: '#ffffff',
   warn: '#ffa500',
   error: '#dc143c'
@@ -16,14 +17,17 @@ function plugin (fastify, opts, next) {
   const options = Object.assign(defaultOptions, opts);
 
   function info () {
+    if (options.level > 1) return;
     log('info', arguments);
   }
 
   function warn () {
+    if (options.level > 2) return;
     log('warn', arguments);
   }
 
   function error () {
+    if (options.level > 3) return;
     log('error', arguments);
   }
 
