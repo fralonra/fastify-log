@@ -12,7 +12,7 @@
     "log",
     "color"
   ],
-  "author": "",
+  "author": "fralonra <fralonra@aliyun.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fralonra/fastify-log/issues"
