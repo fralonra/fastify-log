@@ -20,7 +20,7 @@
   "homepage": "https://github.com/fralonra/fastify-log#readme",
   "dependencies": {
     "ansi-styles": "^3.2.1",
-    "fastify-plugin": "^0.2.2",
+    "fastify-plugin": "^1.2.1",
     "moment": "^2.21.0"
   }
 }
