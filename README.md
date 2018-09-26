@@ -1,7 +1,7 @@
 # fastify-log
 
 [![Build Status](https://travis-ci.org/fralonra/fastify-log.svg?branch=master)](https://travis-ci.org/fralonra/fastify-log)
-[![npm version](https://img.shields.io/npm/v/fastify-log.svg)](https://www.npmjs.com/package/fastify-log)
+[![npm version](https://img.shields.io/npm/v/fastify-log.svg)](https://www.npmjs.com/package/fastify-log) [![Greenkeeper badge](https://badges.greenkeeper.io/fralonra/fastify-log.svg)](https://greenkeeper.io/)
 
 A terminal logger plugin for [Fastify](fastify.io).
 
