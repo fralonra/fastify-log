@@ -55,6 +55,11 @@ const fastify = require('fastify')();
 fastify.register(require('fastify-log'), { options } );
 ```
 
+### Alternative
+
+`fastify-log` is quite a simple plugin, and here is a list of other tools you can turn to:
+* [pino-colada](https://github.com/lrlna/pino-colada/)
+
 ### License
 
 [MIT](https://github.com/fralonra/fastify-log/blob/master/LICENSE)
