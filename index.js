@@ -1,6 +1,7 @@
 const fp = require('fastify-plugin')
 const style = require('ansi-styles')
-const momment = require('moment')
+
+const dateFormat = require('./datetime')
 
 const defaultOptions = {
   allInOne: false,
@@ -31,7 +32,7 @@ function plugin (fastify, opts, next) {
   }
 
   function log (type, text) {
-    const time = options.time ? momment().format(options.timeFormat) + ' ' : ''
+    const time = options.time ? dateFormat(Date.now(), options.timeFormat) + ' ' : ''
     console.log(style.color.ansi16m.hex(options[type]) + time + concat(text), style.color.close)
   }
 
