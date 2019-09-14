@@ -24,8 +24,7 @@
   "homepage": "https://github.com/fralonra/fastify-log#readme",
   "dependencies": {
     "ansi-styles": "^4.0.0",
-    "fastify-plugin": "^1.5.0",
-    "moment": "^2.21.0"
+    "fastify-plugin": "^1.5.0"
   },
   "devDependencies": {
     "snazzy": "^8.0.0",
