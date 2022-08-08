@@ -16,28 +16,28 @@ const defaultOptions = {
 function plugin (fastify, opts, next) {
   const options = Object.assign(defaultOptions, opts)
 
-  function info () {
+  function info (...args) {
     if (options.level > 1) return
-    log('info', arguments)
+    log('info', args)
   }
 
-  function warn () {
+  function warn (...args) {
     if (options.level > 2) return
-    log('warn', arguments)
+    log('warn', args)
   }
 
-  function error () {
+  function error (...args) {
     if (options.level > 3) return
-    log('error', arguments)
+    log('error', args)
   }
 
-  function log (type, text) {
+  function log (type, content) {
     const time = options.time ? dateFormat(Date.now(), options.timeFormat) + ' ' : ''
-    console.log(style.color.ansi16m.hex(options[type]) + time + concat(text), style.color.close)
-  }
+    const text = content.map(c => typeof c === 'object'
+      ? JSON.stringify(c)
+      : c).join(' ')
 
-  function concat (args) {
-    return Array.from(args).join(' ')
+    console.log(`${style.color.ansi16m.hex(options[type])}${time}${text}${style.color.close}`)
   }
 
   const logger = {
